@@ -14,14 +14,14 @@ let package = Package(
         ],
         dependencies: [
             .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
-            .package(url: "https://github.com/curdicu/UIExtensions.git", .branch("main")),
+            .package(url: "https://github.com/horizontalsystems/UIExtensions.Swift.git", .upToNextMajor(from: "1.0.1")),
         ],
         targets: [
             .target(
                     name: "SectionsTableView",
                     dependencies: [
                         "SnapKit",
-                        .product(name: "UIExtensions", package: "UIExtensions"),
+                        .product(name: "UIExtensions", package: "UIExtensions.Swift"),
                     ]
             )
         ]
